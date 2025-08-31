@@ -167,7 +167,7 @@ Create a `src` directory, and inside it, create an `app.ts` file.
 ```ts
 import express from "express";
 
-const app: Application = express();
+const app = express();
 
 // A simple health check route
 app.get("/health", (_, res) => {
