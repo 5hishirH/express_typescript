@@ -1,0 +1,28 @@
+{
+  "name": "initiate-express",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc && tsc-alias",
+    "clean": "rimraf dist",
+    "build:full": "npm run clean && tsc && tsc-alias",
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts"
+  },
+  "keywords": [
+    "express",
+    "typescript"
+  ],
+  "author": "Halder",
+  "license": "ISC",
+  "description": "Express + Typescript starter template",
+  "dependencies": {
+    "express": "^5.1.0",
+    "tsc-alias": "^1.8.16"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  }
+}
