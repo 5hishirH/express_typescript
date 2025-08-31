@@ -165,12 +165,12 @@ It's a best practice to separate the Express app configuration from the server s
 Create a `src` directory, and inside it, create an `app.ts` file.
 
 ```ts
-import express, { Application, Request, Response } from "express";
+import express from "express";
 
 const app: Application = express();
 
 // A simple health check route
-app.get("/health", (req: Request, res: Response) => {
+app.get("/health", (_, res) => {
   res.status(200).json({
     status: "OK",
     message: "Server is healthy",

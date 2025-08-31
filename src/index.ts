@@ -1,13 +1,15 @@
 import app from "@/app";
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
-// Start server
-const startServer = async () => {
+// Start the server
+const startServer = () => {
   try {
     app.listen(PORT, () => {
-      console.log(`🚀 Server running on port ${PORT}`);
-      console.log(`📊 Health check: http://localhost:${PORT}/health`);
+      console.log(`🚀 Server running on http://localhost:${PORT}`);
+      console.log(
+        `📊 Health check available at http://localhost:${PORT}/health`
+      );
     });
   } catch (error) {
     console.error("❌ Failed to start server:", error);
